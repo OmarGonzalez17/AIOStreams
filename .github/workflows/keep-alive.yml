@@ -1,9 +1,14 @@
-name: Keep Koyeb Awake
+name: Keep Koyeb Service Awake
 on:
   schedule:
     - cron: '*/45 * * * *'  # Every 45 minutes
+  workflow_dispatch:  # Allows manual triggering
 jobs:
-  ping:
+  keep-alive:
     runs-on: ubuntu-latest
     steps:
-      - name -I https://profound-kylynn-company38red-e79e865c.koyeb.app
+      - name: Ping Koyeb service
+        run: |
+          echo "Pinging Koyeb service..."
+          curl -I --fail https://profound-kylynn-company38red-e79e865c.koyeb.app
+          echo "Ping successful at $(date)"
