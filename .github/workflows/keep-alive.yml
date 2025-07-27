@@ -1,0 +1,9 @@
+name: Keep Koyeb Awake
+on:
+  schedule:
+    - cron: '*/45 * * * *'  # Every 45 minutes
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name -I https://profound-kylynn-company38red-e79e865c.koyeb.app
