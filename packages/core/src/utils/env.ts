@@ -1296,6 +1296,32 @@ export const Env = cleanEnv(process.env, {
     desc: 'Default SubHero user agent',
   }),
 
+  STREAMASIA_URL: url({
+    default: 'https://stremio-dramacool-addon.xyz',
+    desc: 'StreamAsia URL',
+  }),
+  DEFAULT_STREAMASIA_TIMEOUT: num({
+    default: undefined,
+    desc: 'Default StreamAsia timeout',
+  }),
+  DEFAULT_STREAMASIA_USER_AGENT: userAgent({
+    default: undefined,
+    desc: 'Default StreamAsia user agent',
+  }),
+
+  MORE_LIKE_THIS_URL: url({
+    default: 'https://bbab4a35b833-more-like-this.baby-beamup.club',
+    desc: 'More Like This URL',
+  }),
+  DEFAULT_MORE_LIKE_THIS_TIMEOUT: num({
+    default: undefined,
+    desc: 'Default More Like This timeout',
+  }),
+  DEFAULT_MORE_LIKE_THIS_USER_AGENT: userAgent({
+    default: undefined,
+    desc: 'Default More Like This user agent',
+  }),
+
   // Rate limiting settings
   DISABLE_RATE_LIMITS: bool({
     default: false,
